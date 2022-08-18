@@ -1,11 +1,19 @@
 import Image from 'next/image'
-import React from 'react'
+import Script from 'next/script'
+import React, { useEffect } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 const Welcome = () => {
+    
   return (
     <main className="dark:bg-gray-800 bg-white relative ">
+       <Script 
+        id="Adsense-id" data-ad-client="ca-pub-6226686827399321"
+        async={true} strategy="afterInteractive"
+        onError={ (e) => { console.error('Script failed to load', e) }}
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+     crossOrigin="anonymous" />
     <Header />
     <div className="bg-white flex relative z-20 items-center">
         <div className="container mx-auto px-6 flex flex-col justify-between items-center relative py-8">
